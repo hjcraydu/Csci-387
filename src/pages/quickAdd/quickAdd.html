@@ -1,0 +1,76 @@
+<ion-header>
+  <div id="NavBar">
+  <ion-navbar>
+    <div id="imageNav">
+      <img  src="images/olemiss.png" style="display: inline-block">
+   </div>
+     </ion-navbar>
+  </div>
+</ion-header>
+<ion-content class="outer-content">
+  <div id="ExpenseTitle">
+    Add an Expense
+  </div>
+  <div id="mainContainer">
+  <ion-list>
+    <div id = "inputContainer">
+
+    <ion-item>
+        <ion-label floating>Expense Name</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Expense Type</ion-label>
+      <ion-select [(ngModel)]="Types">
+        <ion-option value="Breakfast">Breakfast</ion-option>
+        <ion-option value="Lunch">Lunch</ion-option>
+        <ion-option value="Dinner">Dinner</ion-option>
+        <ion-option value="Meal Tip">Food</ion-option>
+        <ion-option value="Lodging">Lodging</ion-option>
+        <ion-option value="Car Rental">Transportation</ion-option>
+        <ion-option value="Parking/Tolls">Transportation</ion-option>
+        <ion-option value="Gasoline">Transportation</ion-option>
+        <ion-option value="Transportation Service">Transportation</ion-option>
+        <ion-option value="Business Calls">Business Calls</ion-option>
+        <ion-option value="Conference Fee">Confernce Fee</ion-option>
+        <ion-option value="Banquet Fee">Banquet Fee</ion-option>
+        <ion-option value="Dues">Dues</ion-option>
+        <ion-option value="Misc">Miscellaneous</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Date</ion-label>
+      <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="myDate"></ion-datetime>
+    </ion-item>
+
+    <ion-item>
+        <ion-label>$</ion-label>
+      <ion-input type ="number"></ion-input>
+    </ion-item>
+
+</div>
+  </ion-list>
+</div>
+
+  <div id="anotherButtonDiv">
+    <p><button id="anotherButton" ion-button full (click)="createAnotherExpense()">Create Another Expense</button></p>
+  </div>
+
+  <div id="createButtonDiv">
+    <p><button id="createButton" ion-button full (click)="createExpense()">Finish</button></p>
+  </div>
+  <div id="cancelButtonDiv">
+    <p><button id="cancelButton" ion-button full (click)="cancelExpense()">Cancel</button></p>
+  </div>
+</ion-content>
+
+<style>
+  ion-list:first-child {
+    margin-top: 32px;
+  }
+  ion-list + ion-list {
+    margin-top: 0;
+  }
+</style>

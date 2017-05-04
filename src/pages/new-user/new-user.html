@@ -1,0 +1,99 @@
+
+<ion-header>
+  <div id="NavBar">
+  <ion-navbar>
+    <div id="imageNav">
+   <img  src="images/olemiss.png" style="display: inline-block">
+ </div>
+  </ion-navbar>
+</div>
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      <ion-label stacked>First name</ion-label>
+      <ion-input type="text"[(ngModel)]="first_name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>Last name</ion-label>
+      <ion-input type="text"[(ngModel)]="last_name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>SAP #</ion-label>
+      <ion-input type="number"[(ngModel)]="sap"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>Email address</ion-label>
+      <ion-input type="email"[(ngModel)]="email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked> Password </ion-label>
+      <ion-input type="password" [(ngModel)]="password"> </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked> Password (Re-enter) </ion-label>
+      <ion-input type="password" [(ngModel)]="password_reenter"> </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>Phone number</ion-label>
+      <ion-input type="number" [(ngModel)]="phone_number"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>Department</ion-label>
+      <ion-select [(ngModel)]="department">
+        <ion-option value="Chemical Engineering">Chemical Engineering</ion-option>
+        <ion-option value="Civil Engineering">Civil Engineering</ion-option>
+        <ion-option value="Computer & Information Science">Computer & Information Science</ion-option>
+        <ion-option value="Electrical Engineering">Electrical Engineering</ion-option>
+        <ion-option value="Geology & Geological Engineering">Geology & Geological Engineering</ion-option>
+        <ion-option value="Mechanical Engineering">Mechanical Engineering</ion-option>
+        <ion-option value="Aerospace Studies">Aerospace Studies</ion-option>
+        <ion-option value="African American Studies">African American Studies</ion-option>
+        <ion-option value="Arch Dalrymple III Department of History">Arch Dalrymple III Department of History</ion-option>
+        <ion-option value="Art & Art History">Art & Art History</ion-option>
+        <ion-option value="Biology">Biology</ion-option>
+        <ion-option value="Center For The Study Of Southern Culture">Center For The Study Of Southern Culture</ion-option>
+        <ion-option value="Chemistry & Biochemistry">Chemistry & Biochemistry</ion-option>
+        <ion-option value="Classics">Classics</ion-option>
+        <ion-option value="Economics">Economics</ion-option>
+        <ion-option value="English">English</ion-option>
+        <ion-option value="International Studies">International Studies</ion-option>
+        <ion-option value="Mathematics">Mathematics</ion-option>
+        <ion-option value="Military Science & Leadership">Military Science & Leadership</ion-option>
+        <ion-option value="Modern Languages">Modern Languages</ion-option>
+        <ion-option value="Music">Music</ion-option>
+        <ion-option value="Naval Science">Naval Science</ion-option>
+        <ion-option value="Philosophy & Religion">Philosophy & Religion</ion-option>
+        <ion-option value="Physics & Astronomy">Physics & Astronomy</ion-option>
+        <ion-option value="Political Science">Political Science</ion-option>
+        <ion-option value="Psychology">Psychology</ion-option>
+        <ion-option value="Public Policy Leadership">Public Policy Leadership</ion-option>
+        <ion-option value="Sarah Isom CTR for Women & Gender Studies">Sarah Isom CTR for Women&Gender Studies</ion-option>
+        <ion-option value="Sociology & Anthropology">Sociology & Anthropology</ion-option>
+        <ion-option value="Theatre Arts">Theatre Arts</ion-option>
+        <ion-option value="Writing & Rhetoric">Writing & Rhetoric</ion-option>
+        <ion-option value="Journalism & New Media">Journalism & New Media</ion-option>
+        <ion-option value="School of Accountancy">School of Accountancy</ion-option>
+        <ion-option value="Communication Sciences & Disorders">Communication Sciences & Disorders</ion-option>
+        <ion-option value="Health, Exercise Sci & Recreation Management">Health, Exercise Sci & Recreation Management</ion-option>
+        <ion-option value="Legal Studies">Legal Studies</ion-option>
+        <ion-option value="Nutrition & Hospitality Management">Nutrition & Hospitality Management</ion-option>
+        <ion-option value="Social Work">Social Work</ion-option>
+        <ion-option value="Finance">Finance</ion-option>
+        <ion-option value="Management">Management</ion-option>
+        <ion-option value="Management Information Systems">Management Information Systems</ion-option>
+        <ion-option value="Marketing">Marketing</ion-option>
+        <ion-option value="Leadership & Counselor Education">Leadership & Counselor Education</ion-option>
+        <ion-option value="School of Law">School of Law</ion-option>
+        <ion-option value="Biomolecular Sciences">Biomolecular Sciences</ion-option>
+        <ion-option value="Pharmaceutics & Drug Delivery">Pharmaceutics & Drug Delivery</ion-option>
+        <ion-option value="Pharmacy Administration">Pharmacy Administration</ion-option>
+        <ion-option value="Pharmacy Practice">Pharmacy Practice</ion-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+  <button id="createUser" ion-button block (click)="createUser()"> Create User </button>
+
+</ion-content>

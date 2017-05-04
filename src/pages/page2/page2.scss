@@ -1,0 +1,85 @@
+page-page2 {
+}
+.scroll-content {
+    background-color: lightgrey ;
+}
+
+.toolbar-background {
+
+  text-align:right;
+  max-height:105px;
+  background-color: #13294B;
+}
+#NavBar{
+  margin-top:10px;
+  margin-bottom: auto;
+  text-align:center;
+  height:105px;
+}
+#imageNav{
+
+  margin-bottom: auto;
+  max-width: 105px;
+  max-height: 105px;
+}
+#logoutButton{
+  color: #C8102E;
+}
+#intro
+{
+   text-align:center;
+
+}
+#previousContainer
+{
+  border:solid;
+
+  width:90%;
+  margin-left:auto;
+  margin-right:auto;
+  background-color: white;
+
+}
+#previousButton
+{
+
+  font-size:20px;
+  text-align:left;
+  //color:#C8102E;
+  color:black;
+  margin-top:20px;
+  margin-bottom:20px;
+  color: dimgrey;
+}
+#icons
+{
+   margin-left: auto;
+
+}
+#previousTripTxt
+{
+  border-bottom:solid;
+  border-bottom-width: 2px;
+  text-align:left;
+}
+#allTripsButton{
+  background-color: #13294B;
+  margin-left: auto;;
+  margin-right: auto;
+  margin-bottom: auto;
+}
+#addTripContainer
+{
+
+  margin-top: auto;
+  margin-bottom: auto;
+
+}
+#addButton{
+  background-color: #C8102E;
+  font-size: 20px;
+  height: 60px;
+  margin-top: 5%;
+  margin-left: auto;
+  margin-right: auto;
+}

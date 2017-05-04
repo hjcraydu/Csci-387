@@ -1,0 +1,41 @@
+<ion-header>
+<div id="NavBar">
+<ion-navbar>
+  <ion-buttons end>
+  <button id="logoutButton" ion-button (click)="logoutButton()" >
+  Logout
+  </button>
+  </ion-buttons>
+  <div id="imageNav">
+    <img  src="images/olemiss.png" style="display: inline-block">
+ </div>
+   </ion-navbar>
+</div>
+</ion-header>
+
+
+<ion-content>
+
+   <div id="intro">
+    <h3> Welcome back, {{first_name}}!</h3>
+  </div>
+
+<div id="previousContainer">
+  <div id="previousTripTxt">
+     <h3> Previous Trips</h3>
+  </div>
+    <div id="previousTrips" *ngFor="let trip of trips" clear>
+      <button clear id="previousButton" ion-button full (click)="selectPreviousTrip(trip.id)">
+        {{trip.name}}
+        <ion-icon end id="icons" name="ios-arrow-forward"></ion-icon>
+      </button>
+    </div>
+    <button id="allTripsButton" ion-button full (click)="viewAllTrips()">All trips</button>
+</div>
+    <div id="addTripContainer">
+   <button id="addButton" ion-button full (click)="addTrip()">Add a trip</button>
+    </div>
+
+
+
+</ion-content>

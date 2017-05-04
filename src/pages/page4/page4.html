@@ -1,0 +1,51 @@
+<ion-header>
+  <div id="NavBar">
+  <ion-navbar>
+    <ion-buttons end>
+    <button id="logoutButton" ion-button (click)="logoutButton()" >
+    Logout
+    </button>
+    </ion-buttons>
+    <div id="imageNav">
+      <img  src="images/olemiss.png" style="display: inline-block">
+   </div>
+     </ion-navbar>
+  </div>
+</ion-header>
+
+<ion-content>
+  <ion-list inset>
+    <button ion-item *ngFor="let item of items" (click)="itemSelected(item)">
+      {{ item }}
+    </button>
+  </ion-list>
+<div id="tablecontainer">
+  <div id="balance">
+     <div class="row">
+        <div class="col" id="expenseHeader">Date</div>
+        <div class="col" id="expenseHeader">Expense Name</div>
+        <div class="col" id="expenseHeader">Category</div>
+        <div class="col" id="expenseHeader">Price</div>
+
+     </div>
+</div>
+
+<div id="expenses" *ngFor="let expense of recentExpenses">
+  <div class="row">
+        <div class="col">
+          <ion-label>{{expense.date | date: 'MMM dd, yyyy'}}</ion-label>
+        </div>
+        <div class="col">{{expense.name}}</div>
+        <div class="col">{{expense.type}}</div>
+        <div class="col">${{expense.price}}</div>
+      </div>
+</div>
+</div>
+
+<div id="topTwo">
+    <button id="addExpenseButton" ion-button  (click)="addExpense()">Add Expense</button>
+    <button id="tripDetailsButton" (click)="tripDetails()" ion-button>Trip Details</button>
+</div>
+    <button id="finshTripButton" ion-button full>Finish Trip</button>
+
+</ion-content>

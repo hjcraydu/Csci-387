@@ -1,0 +1,68 @@
+<ion-header>
+  <div id="NavBar">
+  <ion-navbar>
+    <div id="imageNav">
+      <img  src="images/olemiss.png" style="display: inline-block">
+   </div>
+     </ion-navbar>
+  </div>
+</ion-header>
+
+<ion-content class="outer-content">
+  <div id="spacer">
+    <p> Trip Name and Budget </p>
+  </div>
+
+<div id="titleLoc">
+  <ion-list>
+  <div id="tripDetails">
+    <ion-item>
+      <ion-label floating>Trip Name</ion-label>
+      <ion-input [(ngModel)]="event.name">Trip Name</ion-input>
+    </ion-item>
+</div>
+
+<div id="tripDetails">
+    <ion-item>
+      <ion-input placeholder="Budget ($)" type="number" [(ngModel)]="event.budget">Trip Budget</ion-input>
+    </ion-item>
+</div>
+  </ion-list>
+</div>
+
+
+<div id="spacer">
+  <p>Begin and End Date</p>
+</div>
+<div id="dates">
+  <ion-list>
+<div id="tripDetails">
+     <ion-item>
+      <ion-label> Begin Date </ion-label>
+       <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="event.timeStarts"></ion-datetime>
+     </ion-item>
+</div>
+
+<div id="tripDetails">
+     <ion-item>
+       <ion-label> End Date </ion-label>
+       <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="event.timeEnds"></ion-datetime>
+     </ion-item>
+</div>
+
+
+   </ion-list>
+</div>
+  <p>
+    <button id="createTripButton" ion-button full (click)="createTrip()"> Create Trip</button>
+  </p>
+</ion-content>
+
+<style>
+  ion-list:first-child {
+    margin-top: 32px;
+  }
+  ion-list + ion-list {
+    margin-top: 0;
+  }
+</style>

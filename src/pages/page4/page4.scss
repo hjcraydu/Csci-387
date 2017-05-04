@@ -1,0 +1,127 @@
+page-page4 {
+
+}
+.scroll-content {
+    background-color: lightgrey ;
+}
+
+.toolbar-background {
+
+  text-align:right;
+  max-height:105px;
+  background-color: #13294B;
+}
+#NavBar{
+  margin-top:10px;
+  margin-bottom: auto;
+  text-align:center;
+  height:105px;
+}
+#imageNav{
+
+  margin-bottom: auto;
+  max-width: 105px;
+  max-height: 105px;
+}
+#logoutButton{
+  color: #C8102E;
+}
+.row
+{
+  border:solid;
+  margin: auto;
+}
+.col
+{
+  font-size:15px;
+  text-align:left;
+  color:black;
+  border: solid;
+  border-width: thin;
+}
+overviewDisplay
+{
+  border:dashed;
+  padding:500px;
+}
+#balance
+{
+  border:solid;
+  background-color:lightRed;
+  color:black;
+  font-size:40;
+}
+#expenseHeader
+{
+  margin-left: auto;
+  margin-right: auto;
+  font-size:22px;
+  text-align:left;
+}
+#expense1
+{
+  margin-left: auto;
+  margin-right: auto;
+ border:solid;
+}
+#expense2
+{
+  margin-left: auto;
+  margin-right: auto;
+ border:solid;
+}
+#expense3
+{
+  margin-left: auto;
+  margin-right: auto;
+ border:solid;
+}
+#expense4
+{
+  margin-left: auto;
+  margin-right: auto;
+  border:solid;
+}
+#topTwo
+{
+
+  margin-left:20px;
+  margin-right:20px;
+}
+#tablecontainer{
+  margin: auto;
+  margin-left: 30px;
+  margin-right: 30px;
+  background-color: white;
+}
+#addExpenseButton
+{
+  background-color: #13294B;
+  margin-top:50px;
+  margin-left:auto;
+  margin-right:auto;
+  width:100%;
+  padding:23px;
+  font-size:18px;
+}
+
+#tripDetailsButton
+{
+  background-color: #13294B;
+  margin-top:20px;
+  margin-left:auto;
+  margin-right:auto;
+  width:100%;
+  padding:23px;
+  font-size:18px;
+}
+#finshTripButton
+{
+  margin-top:40px;
+  background-color:#C8102E;;
+  padding:40px;
+  font-size:30px;
+  color:white;
+  font-weight:bold;
+  margin-bottom:30px;
+}

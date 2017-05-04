@@ -1,0 +1,96 @@
+page-quickAdd {
+
+}
+.scroll-content {
+    background-color: lightgrey ;
+}
+
+.toolbar-background {
+
+  text-align:right;
+  max-height:105px;
+  background-color: #13294B;
+}
+#NavBar{
+  margin-top:10px;
+  margin-bottom: auto;
+  text-align:center;
+  height:105px;
+}
+#imageNav{
+
+  margin-bottom: auto;
+  max-width: 105px;
+  max-height: 105px;
+}
+
+#ExpenseTitle{
+  text-align:center;
+  margin-top:15px;
+  color:black;
+  padding:15px;
+  font-size:35px;
+  border-bottom: solid;
+  border-bottom-color: darkgrey;
+  letter-spacing:.05em;
+  font-style:bold;
+  border-width:2px;
+}
+#mainContainer{
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+#inputContainer{
+margin-left:auto;
+margin-right:auto;
+
+height:100%;
+}
+
+
+#newExpense{
+    text-align:center;
+}
+#anotherButtonDiv
+{
+  text-align:center;
+  margin-top:10px;
+  margin-bottom:5px;
+  font-size:20px;
+
+  font-weight:bold;
+
+}
+
+#anotherButton{
+  background-color:#13294B;
+
+}
+
+#createButtonDiv
+{
+  text-align:center;
+  margin-top:10px;
+  margin-bottom:5px;
+  font-size:20px;
+  font-weight:bold;
+}
+
+#createButton{
+  background-color:#C8102E;
+}
+
+#cancelButtonDiv
+{
+  text-align:center;
+  margin-top:10px;
+  margin-bottom:5px;
+  background-color:#C8102E;
+  font-size:20px;
+  font-weight:bold;
+}
+
+#cancelButton{
+  background-color:#C8102E;
+}

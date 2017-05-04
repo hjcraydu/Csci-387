@@ -1,0 +1,38 @@
+<ion-header>
+  <div id="NavBar">
+  <ion-navbar>
+    <div id="imageNav">
+      <img  src="images/olemiss.png" style="display: inline-block">
+   </div>
+     </ion-navbar>
+  </div>
+</ion-header>
+
+<ion-content padding>
+  <div id="Login">
+    Login Page
+  </div>
+  <div id="loginContainer">
+    <ion-list id="entry">
+  <div id="info">
+    <ion-item>
+      <ion-label floating>Username</ion-label>
+      <ion-input type="text" value="" [(ngModel)]="username"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Password</ion-label>
+      <ion-input type="password" [(ngModel)]="password"></ion-input>
+    </ion-item>
+ </div>
+  </ion-list>
+
+
+  <button id="loginButton" ion-button full (click) ="Login()">Login</button>
+
+    <button id="createNewButton" ion-button full (click)="newUser()">Create New User</button>
+
+</div>
+
+
+</ion-content>

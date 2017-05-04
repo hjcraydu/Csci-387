@@ -1,0 +1,54 @@
+<!--
+  Generated template for the Details page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <div id="NavBar">
+  <ion-navbar>
+
+    <div id="imageNav">
+      <img  src="images/olemiss.png" style="display: inline-block">
+   </div>
+     </ion-navbar>
+  </div>
+</ion-header>
+
+
+<ion-content padding>
+   <ion-list inset>
+    <button ion-item *ngFor="let item of items" (click)="itemSelected(item)">
+      {{ item }}
+    </button>
+  </ion-list>
+<ion-grid>
+  <div id="balance">
+     <div  ion-row>
+        <div id="expenseHeader" ion-col>Date</div>
+        <div  id="expenseHeader" ion-col>Expense Name</div>
+        <div  id="expenseHeader" ion-col>Category</div>
+        <div  id="expenseHeader" ion-col>Price</div>
+        <div  id="expenseHeader" ion-col></div>
+     </div>
+</div>
+</ion-grid>
+<ion-grid>
+<div id="expenses" *ngFor="let expense of recentExpenses">
+  <div ion-row>
+        <div ion-col>
+          <ion-label>{{expense.date | date: 'MMM dd, yyyy'}}</ion-label>
+        </div>
+        <div ion-col>{{expense.name}}</div>
+        <div ion-col>{{expense.type}}</div>
+        <div ion-col>${{expense.price}}</div>
+        <div ion-col><button ion-button round id="delete" (click)="delete(expense.id)">Delete</button></div>
+      </div>
+</div>
+</ion-grid>
+<div id="topTwo">
+    <button id="addExpenseButton" ion-button  (click)="addExpense()">Add Expense</button>
+    <button id="backButton" ion-button (click)="home()" full>Expense Overview</button>
+</div>
+    <button id="finshTripButton" ion-button full>Finish Trip</button>
+</ion-content>
