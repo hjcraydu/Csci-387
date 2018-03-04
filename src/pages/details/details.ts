@@ -20,8 +20,14 @@ export class DetailsPage{
     .subscribe(response => {
       if(response.result == "SUCCESS")
         this.recentExpenses = response.data
-      else
-        console.log("failure");
+      else {
+        let alert = this.alertCtrl.create({
+          title: "Error",
+          subTitle: "Database retrieval failed with message: " + response.result,
+          buttons: ['OK']
+        });
+        alert.present();
+      }
     });
   }
   addExpense()

@@ -17,37 +17,41 @@
 
     <ion-item>
         <ion-label floating>Expense Name</ion-label>
-      <ion-input type="text"></ion-input>
+      <ion-input [(ngModel)]="event.name"></ion-input>
     </ion-item>
 
     <ion-item>
       <ion-label>Expense Type</ion-label>
-      <ion-select [(ngModel)]="Types">
+      <ion-select [(ngModel)]="event.type">
+        <ion-option value="Gas">Gas</ion-option>
+        <ion-option value="Hotel">Hotel</ion-option>
         <ion-option value="Breakfast">Breakfast</ion-option>
         <ion-option value="Lunch">Lunch</ion-option>
         <ion-option value="Dinner">Dinner</ion-option>
-        <ion-option value="Meal Tip">Food</ion-option>
-        <ion-option value="Lodging">Lodging</ion-option>
-        <ion-option value="Car Rental">Transportation</ion-option>
-        <ion-option value="Parking/Tolls">Transportation</ion-option>
-        <ion-option value="Gasoline">Transportation</ion-option>
-        <ion-option value="Transportation Service">Transportation</ion-option>
-        <ion-option value="Business Calls">Business Calls</ion-option>
+        <ion-option value="Parking">Parking</ion-option>
+        <ion-option value="Toll Booth">Toll Booth</ion-option>
+        <ion-option value="Bus">Bus</ion-option>
+        <ion-option value="Subway">Subway</ion-option>
+        <ion-option value="Taxi">Taxi</ion-option>
+        <ion-option value="Train">Train</ion-option>
+        <ion-option value="Airline Ticket">Airline Ticket</ion-option>
         <ion-option value="Conference Fee">Confernce Fee</ion-option>
         <ion-option value="Banquet Fee">Banquet Fee</ion-option>
         <ion-option value="Dues">Dues</ion-option>
-        <ion-option value="Misc">Miscellaneous</ion-option>
+        <ion-option value="Rental Car">Rental Car</ion-option>
+        <ion-option value="Luxury">Luxury</ion-option>
+        <ion-option value="Miles Traveled">Miles Traveled</ion-option>
       </ion-select>
     </ion-item>
 
     <ion-item>
       <ion-label>Date</ion-label>
-      <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="myDate"></ion-datetime>
+      <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="event.date"></ion-datetime>
     </ion-item>
 
     <ion-item>
         <ion-label>$</ion-label>
-      <ion-input type ="number"></ion-input>
+      <ion-input type="number" [(ngModel)]="event.price"></ion-input>
     </ion-item>
 
 </div>

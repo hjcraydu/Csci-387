@@ -32,8 +32,14 @@ export class Page2
         .subscribe(response => {
           if(response.result == "SUCCESS")
             this.trips = response.data;
-          else
-            console.log(response.result);
+          else {
+            let alert = this.alertCtrl.create({
+              title: "Error",
+              subTitle: "Database retrieval failed with message: " + response.result,
+              buttons: ['OK']
+            });
+            alert.present();
+          }
         });
       }
       addTrip()

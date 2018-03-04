@@ -32,18 +32,46 @@ export class Page5 {
     // We should probably add a warning for if someone forgets to fill in a field
     let headers = new Headers({'Content-Type': 'application/json'});
     let options = new RequestOptions({headers: headers});
-    let body = JSON.stringify({date: this.event.date,
-                               price: this.event.price,
-                               expense_name: this.event.name,
-                               trip_id: this.trip_id,
-                               expense_type: this.event.type});
-    this.http.post("https://turing.cs.olemiss.edu/~N_log_n/AddExpense1.php", body, options)
+    let body = JSON.stringify({
+      date: this.event.date,
+      price: this.event.price,
+      expense_name: this.event.name,
+      trip_id: this.trip_id,
+      expense_type: this.event.type
+    });
+    this.http.post("https://turing.cs.olemiss.edu/~N_log_n/AddExpense.php", body, options)
     .map(res => res.json())
     .subscribe(response => {
-      if(response.result == "SUCCESS"){
-        this.result = response.data;
-        this.navCtrl.pop()
-      } else
+      if(response.result == "SUCCESS")
+        this.navCtrl.pop();
+      else if(response.result == "EXISTS") {
+        let alert = this.alertCtrl.create({
+          title: "Warning",
+          subTitle: "You already have a meal at this time on this date. Add it anyway?",
+          buttons: [
+            {
+              text: "Yes",
+              handler: () =>{
+                this.http.post("https://turing.cs.olemiss.edu/~N_log_n/AddExpense1.php", body, options)
+                .map(res => res.json())
+                .subscribe(response => {
+                  if(response.result == "SUCCESS"){
+                    this.navCtrl.pop();
+                  } else
+                    console.log(response.result);
+                });
+              }
+            },
+            {
+              text: "No",
+              role: "cancel",
+              handler: () => {console.log("canceled")}
+            }
+          ]
+        });
+        alert.present();
+      }
+      else
         console.log(response.result);
     });
   }
@@ -59,20 +87,51 @@ export class Page5 {
       trip_id: this.trip_id,
       expense_type: this.event.type
     });
-    this.http.post("https://turing.cs.olemiss.edu/~N_log_n/AddExpense1.php", body, options)
+    this.http.post("https://turing.cs.olemiss.edu/~N_log_n/AddExpense.php", body, options)
     .map(res => res.json())
     .subscribe(response => {
       if(response.result == "SUCCESS")
-        this.result = response.data;
+        this.navCtrl.push(Page5, {
+          trip_id: this.trip_id,
+          user_id: this.user_id,
+          username: this.username
+        })
+        .then(() => this.navCtrl.remove(this.navCtrl.indexOf(active)));
+      else if(response.result == "EXISTS") {
+        let alert = this.alertCtrl.create({
+          title: "Warning",
+          subTitle: "You already have a meal at this time on this date. Add it anyway?",
+          buttons: [
+            {
+              text: "Yes",
+              handler: () =>{
+                this.http.post("https://turing.cs.olemiss.edu/~N_log_n/AddExpense1.php", body, options)
+                .map(res => res.json())
+                .subscribe(response => {
+                  if(response.result == "SUCCESS"){
+                    this.navCtrl.push(Page5, {
+                      trip_id: this.trip_id,
+                      user_id: this.user_id,
+                      username: this.username
+                    })
+                    .then(() => this.navCtrl.remove(this.navCtrl.indexOf(active)));
+                  } else
+                    console.log(response.result);
+                });
+              }
+            },
+            {
+              text: "No",
+              role: "cancel",
+              handler: () => {console.log("canceled")}
+            }
+          ]
+        });
+        alert.present();
+      }
       else
         console.log(response.result);
     });
-    this.navCtrl.push(Page5, {
-      trip_id: this.trip_id,
-      user_id: this.user_id,
-      username: this.username
-    })
-    .then(() => this.navCtrl.remove(this.navCtrl.indexOf(active)));
   }
   cancelExpense()
   {
